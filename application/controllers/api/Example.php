@@ -3,7 +3,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 // This can be removed if you use __autoload() in config.php OR use Modular Extensions
-require APPPATH . '/libraries/REST_Controller.php';
+/** @noinspection PhpIncludeInspection */
+require APPPATH . 'libraries/REST_Controller.php';
 
 /**
  * This is an example of a few basic user interaction methods you could use
@@ -72,7 +73,7 @@ class Example extends REST_Controller {
             $this->response(NULL, REST_Controller::HTTP_BAD_REQUEST); // BAD_REQUEST (400) being the HTTP response code
         }
 
-        // Get the user from the array, using the id as key for retreival.
+        // Get the user from the array, using the id as key for retrieval.
         // Usually a model is to be used for this.
 
         $user = NULL;
